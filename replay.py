@@ -6,7 +6,6 @@ import numpy as np
 from argparse import ArgumentParser
 from scipy.signal import find_peaks
 import matplotlib.pyplot as plt
-from collections import defaultdict
 
 do_scan = True
 
