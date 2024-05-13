@@ -36,7 +36,7 @@ def MHz_to_Hz(value):
     return int(float(value) * 1e6)
 
 def main():
-    global args, infos, do_scan, last_fft, freq, last_rows, frequencies
+    global do_scan
     parser = ArgumentParser(description="FFT Replay Tool")
     parser.add_argument("--dir", type=str, help="FFT dir")
     parser.add_argument("--cutoff", type=float, default=False, help="Cutoff frequency for peaks (default: 2 standard deviations above mean)")
