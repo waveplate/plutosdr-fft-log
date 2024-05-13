@@ -13,7 +13,7 @@ do_scan = True
 def process_fft_data(output_file, start, end, bandwidth, fftsize, frames):
     sdr_start = int(start + bandwidth / 2)
     sdr_end = int(end - bandwidth / 2)
-    num_steps = int((sdr_end - sdr_start) / 2) + 1
+    num_steps = int((sdr_end - sdr_start) / bandwidth) + 1
     all_fft_results = []
 
     with open(output_file, "rb") as file:
