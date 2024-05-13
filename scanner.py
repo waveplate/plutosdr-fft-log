@@ -9,7 +9,7 @@ import numpy as np
 from argparse import ArgumentParser
 from gnuradio import blocks, gr, iio
 from gnuradio.fft import logpwrfft, window
-from scipy.signal import find_peaks, ricker, firwin, lfilter
+from scipy.signal import find_peaks
 import matplotlib.pyplot as plt
 from gnuradio.fft import window
 import traceback
@@ -188,10 +188,10 @@ def main():
 
     parser = ArgumentParser(description="FFT Frequency Scanner and Logger")
     parser.add_argument("--dir", type=str, default="./fft", help="Directory to save FFT files")
-    parser.add_argument("--bandwidth", type=MHz_to_Hz, default=10, help="Bandwidth per FFT in MHz")
+    parser.add_argument("--bandwidth", type=MHz_to_Hz, default=10000000, help="Bandwidth per FFT in MHz")
     #parser.add_argument("--samplerate", type=MHz_to_Hz, default=50, help="Sample rate in Hz") # plutosdr has quadrature sampling
-    parser.add_argument("--start", type=MHz_to_Hz, default=90, help="Start Frequency in MHz")
-    parser.add_argument("--end", type=MHz_to_Hz, default=150, help="End Frequency in MHz")
+    parser.add_argument("--start", type=MHz_to_Hz, default=90000000, help="Start Frequency in MHz")
+    parser.add_argument("--end", type=MHz_to_Hz, default=150000000, help="End Frequency in MHz")
     parser.add_argument("--fftsize", type=int, default=1024, help="FFT size, must be a power of 2")
     parser.add_argument("--frames", type=int, default=2, help="Number of FFT frames to capture each sample period")
     parser.add_argument("--cutoff", type=float, default=False, help="Cutoff frequency for peaks (default: 2 standard deviations above mean)")
