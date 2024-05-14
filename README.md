@@ -12,7 +12,7 @@
 `scanner.py` is designed to scan frequency ranges and log them efficiently. it is configurable via several command-line arguments:
 
 - `--dir`: directory to save FFT files (default: `./fft`)
-- `--bandwidth`: bandwidth per FFT in MHz, will be automatically adjusted if it doesn't fit evenly between start and end frequencies (default: 10, max 52 mhz)
+- `--bandwidth`: bandwidth per FFT in MHz, will be automatically adjusted if it doesn't fit evenly between start and end frequencies (default: 10, max 52)
 - `--start`: start frequency in MHz (default: 90)
 - `--end`: end frequency in MHz (default: 150)
 - `--fftsize`: FFT size, must be a power of 2 (default: 1024)
