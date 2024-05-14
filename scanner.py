@@ -208,8 +208,6 @@ def main():
     args.sdr_start = int(args.start + args.bandwidth / 2)
     args.sdr_end = int(args.end - args.bandwidth / 2)
 
-    plt.ion()
-
     fig, ax = plt.subplots()
     plt.subplots_adjust(bottom=0.2)
     ax_button = plt.axes([0.8, 0.05, 0.1, 0.075])
@@ -229,6 +227,7 @@ def main():
 
     while True:
         update_data(args, line, scatter, ax, fig)
+        plt.ion()
         plt.pause(0.1)
         time.sleep(0.1)
 
